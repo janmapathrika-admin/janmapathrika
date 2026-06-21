@@ -11,14 +11,19 @@
   <meta property="og:image" content="https://janmapathrika-admin.github.io/janmapathrika/assets/social-preview.png">
   <meta name="theme-color" content="#fbf4e8">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=brand-size-1">
+  <script src="script.js?v=brand-size-1" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="#home" aria-label="Janmapathrika home">
-        <img class="brand__logo" src="assets/logo-placeholder.svg" alt="Janmapathrika logo">
+        <picture class="brand__logo">
+          <source media="(min-width: 1024px)" srcset="assets/images/logo-large.webp">
+          <source media="(min-width: 560px)" srcset="assets/images/logo-medium.webp">
+          <img class="brand__mark" src="assets/images/logo-small.webp" alt="">
+        </picture>
+        <span class="brand__name">Janmapathrika</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation" hidden>
@@ -42,12 +47,31 @@
     <section class="hero section" aria-labelledby="hero-title">
       <div class="container hero__content">
         <div class="hero__copy">
-          <h1 id="hero-title">Janmapathrika</h1>
-          <p>Jathakam prepared from your submitted birth details and delivered as a polished PDF by email.</p>
-          <a class="button" href="#get-started">Get Started</a>
+          <h1 id="hero-title"><span>Traditional Astrology,</span><span>Made Accessible</span></h1>
+          <span class="hero__divider" aria-hidden="true"></span>
+          <p>Get your and your loved ones' Jathakam prepared through established astrological methods and delivered as a comprehensive PDF.</p>
+          <a class="button button--hero" href="#get-started"><span aria-hidden="true">✦</span> Get Started</a>
         </div>
-        <div class="hero__media" aria-hidden="true">
-          <img src="assets/hero-placeholder.svg" alt="">
+        <div class="hero__media">
+          <div class="hero__visual" aria-hidden="true">
+            <div class="celestial-card">
+              <div class="orbit orbit--outer"></div>
+              <div class="orbit orbit--middle"></div>
+              <div class="orbit orbit--inner"></div>
+              <div class="orbit orbit--tilt"></div>
+              <div class="orbit-node orbit-node--top"></div>
+              <div class="orbit-node orbit-node--left"></div>
+              <div class="orbit-node orbit-node--right"></div>
+              <div class="sun">
+                <span class="sun__surface"></span>
+              </div>
+              <span class="star star--one"></span>
+              <span class="star star--two"></span>
+              <span class="star star--three"></span>
+              <span class="star star--four"></span>
+            </div>
+            <p class="hero__planet-name">Suryan</p>
+          </div>
         </div>
       </div>
     </section>
@@ -87,9 +111,8 @@
               <ul class="feature-list">
                 <li>A Jathakam based on the submitted birth details</li>
                 <li>A professionally formatted PDF document</li>
-                <li>Approximately 50 pages of structured information</li>
+                <li>Approximately 150 pages of structured information</li>
                 <li>Delivered directly to the submitted email address</li>
-                <li>Prepared using the exact details entered in the form</li>
               </ul>
             </div>
             <div class="info-row__image">
@@ -100,7 +123,7 @@
           <article class="info-row info-row--reverse" id="delivery" aria-labelledby="delivery-title">
             <div class="info-row__content">
               <h2 id="delivery-title">Delivery Information</h2>
-              <p>Each request is prepared individually. The expected turnaround time is 1 week for free users and &lt;3 days for any donor. The completed PDF will be sent to the email submitted in the form.</p>
+              <p>Each request is prepared individually. The expected turnaround time is 1 week for free users and within 3 days for any donor. The completed PDF will be sent to the email submitted in the form.</p>
               <p>Please double-check your email address and birth details before submitting.</p>
             </div>
             <div class="info-row__image">
@@ -213,15 +236,16 @@
   <footer class="site-footer">
     <div class="container site-footer__grid">
       <div>
-        <p class="site-footer__name">Janmapathrika</p>
+        <div class="site-footer__brand">
+          <picture class="site-footer__logo">
+            <source media="(min-width: 1024px)" srcset="assets/images/logo-large.webp">
+            <source media="(min-width: 560px)" srcset="assets/images/logo-medium.webp">
+            <img src="assets/images/logo-small.webp" alt="">
+          </picture>
+          <p class="site-footer__name">Janmapathrika</p>
+        </div>
         <p>Jathakam PDF requests prepared from submitted birth details.</p>
       </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="contact.html">Contact</a>
-      </nav>
       <p class="copyright">&copy; <span data-current-year>2026</span> Janmapathrika. All rights reserved.</p>
     </div>
   </footer>

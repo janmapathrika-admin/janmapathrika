@@ -11,14 +11,19 @@
   <meta property="og:image" content="https://janmapathrika-admin.github.io/janmapathrika/assets/social-preview.png">
   <meta name="theme-color" content="#fbf4e8">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=brand-size-1">
+  <script src="script.js?v=brand-size-1" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="index.html" aria-label="Janmapathrika home">
-        <img class="brand__logo" src="assets/logo-placeholder.svg" alt="Janmapathrika logo">
+        <picture class="brand__logo">
+          <source media="(min-width: 1024px)" srcset="assets/images/logo-large.webp">
+          <source media="(min-width: 560px)" srcset="assets/images/logo-medium.webp">
+          <img class="brand__mark" src="assets/images/logo-small.webp" alt="">
+        </picture>
+        <span class="brand__name">Janmapathrika</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation" hidden>
@@ -54,15 +59,16 @@
   <footer class="site-footer">
     <div class="container site-footer__grid">
       <div>
-        <p class="site-footer__name">Janmapathrika</p>
+        <div class="site-footer__brand">
+          <picture class="site-footer__logo">
+            <source media="(min-width: 1024px)" srcset="assets/images/logo-large.webp">
+            <source media="(min-width: 560px)" srcset="assets/images/logo-medium.webp">
+            <img src="assets/images/logo-small.webp" alt="">
+          </picture>
+          <p class="site-footer__name">Janmapathrika</p>
+        </div>
         <p>Jathakam PDF requests prepared from submitted birth details.</p>
       </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="contact.html">Contact</a>
-      </nav>
       <p class="copyright">&copy; <span data-current-year>2026</span> Janmapathrika. All rights reserved.</p>
     </div>
   </footer>
